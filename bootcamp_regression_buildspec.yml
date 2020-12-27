@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+    commands:
+
+  build:
+    commands:
+      - mvn clean test -Dcucumber.options="--tags '@TC_01'" -DexecutionPlatform="AWS_CHROME"
+
+  post_build:
+    commands:
+      - aws s3 cp . s3://854565-prasanth-valiveti-bootcamp-results/regression/ --recursive --exclude "*" --include "*.html"

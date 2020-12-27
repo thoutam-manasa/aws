@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+
+  build:
+    commands:
+      - mvn clean test -Dcucumber.options="--tags '@TC_01'" -DexecutionPlatform="AWS_DEVICEFARM_CHROME"
+
+  post_build:
+    commands:
+      - aws s3 cp . s3://854565-prasanth-valiveti-bootcamp-results/devicefarm --recursive --exclude "*" --include "*.html"

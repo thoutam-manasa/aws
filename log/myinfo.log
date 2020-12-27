@@ -1,0 +1,6 @@
+23:33:09  INFO: runner.Runner - ########### INSIDE BEFORE CLASS ###########
+23:33:09  INFO: stepdefinitions.MasterStepDefs - Starting - Test login with valid credentials
+23:33:54  INFO: stepdefinitions.MasterStepDefs - Test login with valid credentials Status - PASSED
+23:33:54  INFO: stepdefinitions.MasterStepDefs - ######### Count of Passed #########
+23:33:54  INFO: stepdefinitions.MasterStepDefs - 1
+23:33:54  INFO: stepdefinitions.MasterStepDefs - ######### Count of passed #########
